@@ -36,7 +36,12 @@
         <!-- Герой -->
         <section class="section-hero">
             <h1 class="hero-title">Эффективные решения <br/>для вашего бизнеса</h1>
-            <button class="order" type="submit">Заказать услугу</button>
+            <button class="order" type="submit" data-modal-open>Заказать услугу</button>
+            <div class="backdrop is-hidden" data-modal>
+                <div class="modal">
+                    <batton class="close" data-modal-close></batton>
+                </div>
+            </div>
         </section>
 
         <!-- Особенности -->
@@ -70,13 +75,28 @@
             <h2 class="section-title">Чем мы занимаемся</h2>
             <ul class="gallery-list">
                 <li class="item">
+                <div class="box">    
                     <img src="./images/work/box1.jpg" alt="Ноутбук" width="370" height="294">
+                <div class="overlay">
+                    <p>десктопные приложения</p>
+                </div>
+                </div>
                 </li>
                 <li class="item">
+                    <div class="box">
                     <img src="./images/work/box2.jpg" alt="Смартфон" width="370" height="294">                  
+                 <div class="overlay">
+                    <p>мобильные приложения</p>
+                </div>
+                </div>
                 </li>
                 <li class="item">
+                    <div class="box">
                     <img src="./images/work/box3.jpg" alt="Планшет" width="370" height="294">
+                 <div class="overlay">
+                    <p>дизайнерские решения</p>
+                </div>
+                </div>
                 </li>
             </ul>
             </div>
@@ -87,7 +107,7 @@
             <div class="conteiner">
             <h2 class="section-title">Наша команда</h2>
             <ul class="team-list">
-                <li class="item">
+                <li class="team-item">
                     <img src="./images/team/Игорь.jpg" alt="Игорь Демьяненко" width="270" height="260">
                 <div class="description">
                     <h3 class="team-title">Игорь Демьяненко</h3>
@@ -116,7 +136,7 @@
                     </ul>
                 </div>
                 </li>
-                <li class="item">
+                <li class="team-item">
                     <img src="./images/team/Ольга.jpg" alt="Ольга Репина" width="270" height="260">
                 <div class="description">
                     <h3 class="team-title">Ольга Репина</h3>
@@ -145,7 +165,7 @@
                     </ul>
                 </div>
                 </li>
-                <li class="item">
+                <li class="team-item">
                     <img src="./images/team/Николай.jpg" alt="Николай Тарасов" width="270" height="260">
                 <div class="description">
                     <h3 class="team-title">Николай Тарасов</h3>
@@ -174,7 +194,7 @@
                     </ul>
                 </div>
                 </li>
-                <li class="item">
+                <li class="team-item">
                     <img src="./images/team/Михаил.jpg" alt="Михаил Ермаков" width="270" height="260">
                 <div class="description">
                     <h3 class="team-title">Михаил Ермаков</h3>
@@ -212,12 +232,12 @@
             <div class="conteiner">
                 <h2 class="section-title">Постоянные клиенты</h2>
                 <ul class="clients-list">
-                    <li class="item"><a class="client-link" href=""><svg width="44" height="49"><use href="./images/icons.svg#icon-logo-1"></use></svg></a></li>
-                    <li class="item"><a class="client-link" href=""><svg width="40" height="52"><use href="./images/icons.svg#icon-logo-2"></use></svg></a></li>
-                    <li class="item"><a class="client-link" href=""><svg width="41" height="43"><use href="./images/icons.svg#icon-logo-3"></use></svg></a></li>
-                    <li class="item"><a class="client-link" href=""><svg width="80" height="42"><use href="./images/icons.svg#icon-logo-4"></use></svg></a></li>
-                    <li class="item"><a class="client-link" href=""><svg width="59" height="47"><use href="./images/icons.svg#icon-logo-5"></use></svg></a></li>
-                    <li class="item"><a class="client-link" href=""><svg width="88" height="45"><use href="./images/icons.svg#icon-logo-6"></use></svg></a></li>
+                    <li class="clients-list-item"><a class="client-link" href=""><svg width="44" height="49"><use href="./images/icons.svg#icon-logo-1"></use></svg></a></li>
+                    <li class="clients-list-item"><a class="client-link" href=""><svg width="40" height="52"><use href="./images/icons.svg#icon-logo-2"></use></svg></a></li>
+                    <li class="clients-list-item"><a class="client-link" href=""><svg width="41" height="43"><use href="./images/icons.svg#icon-logo-3"></use></svg></a></li>
+                    <li class="clients-list-item"><a class="client-link" href=""><svg width="80" height="42"><use href="./images/icons.svg#icon-logo-4"></use></svg></a></li>
+                    <li class="clients-list-item"><a class="client-link" href=""><svg width="59" height="47"><use href="./images/icons.svg#icon-logo-5"></use></svg></a></li>
+                    <li class="clients-list-item"><a class="client-link" href=""><svg width="88" height="45"><use href="./images/icons.svg#icon-logo-6"></use></svg></a></li>
                 </ul>
             </div>
         </section>
@@ -263,5 +283,6 @@
         </div>
             </div>
     </footer>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
