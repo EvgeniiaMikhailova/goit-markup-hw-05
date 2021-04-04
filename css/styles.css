@@ -128,19 +128,20 @@ h3 {
   padding-bottom: 32px;
 
   color: var(--title-text-color);
+  fill: var(--primary-text-color);
   letter-spacing: 0.02em;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contacts .link {
   display: flex;
   align-items: center;
   color: var(--primary-text-color);
-  fill: var(--primary-text-color);
 }
 
 .site-nav .link:hover,
@@ -266,7 +267,7 @@ h3 {
   width: 100vw;
   height: 100vh;
 
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.3);
   opacity: 1;
 
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -275,12 +276,10 @@ h3 {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-  visibility: hidden;
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.7);
-  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5);
 }
 
 .modal {
@@ -294,10 +293,8 @@ h3 {
   padding: 8px;
 
   background-color: var(--primary-bgc);
-  opacity: 1;
 
-  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close {
@@ -466,10 +463,39 @@ h3 {
   padding-bottom: 30px;
 }
 
+/* Ссылки на соцсети */
+.networks-list {
+  display: flex;
+  justify-content: center;
+}
+
+.item-network .network-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.item-network + .item-network {
+  margin-left: 10px;
+}
+
 .team-item .network-link {
   fill: var(--base-icon-color);
+  background-color: rgba(255, 255, 255, 0.1);
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.network-link:hover,
+.network-link:focus {
+  background-color: var(--accent-color);
 }
 
 .team-item .network-link:hover,
@@ -683,31 +709,4 @@ h3 {
 
 .footer-networks .network-link {
   fill: var(--primary-bgc);
-}
-
-/* Ссылки на соцсети */
-.networks-list {
-  display: flex;
-  justify-content: center;
-}
-
-.networks-list .network-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.item-network + .item-network {
-  margin-left: 10px;
-}
-
-.networks-list .network-link:hover,
-.networks-list .network-link:focus {
-  background-color: var(--accent-color);
 }
